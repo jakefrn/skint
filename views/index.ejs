@@ -1,0 +1,44 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/material.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">theskint.com - NYC events</span>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+    	 
+			<ul class="demo-list-two mdl-list">
+
+			<% for (var i = 0; i < data.length; i++) { %>
+
+			  <li class="mdl-list__item   mdl-shadow--2dp">
+			    <span class="mdl-list__item-primary-content">
+
+			    <p data-event="<%= [i] %>"><%- data[i] %>  </p>
+
+			    </span>
+			    <span class="mdl-list__item-secondary-content">
+					<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-<%= [i] %>">
+					  <input type="checkbox" id="checkbox-<%= [i] %>" class="mdl-checkbox__input">
+					  <span class="mdl-checkbox__label"> </span>
+					</label>
+			    </span>
+			  </li>
+
+			 <% } %> 
+			 </ul>
+
+    </div>
+  </main>
+</div>
+  
+<%   
+console.log(data);
+%>
+
+<script src="js/material.min.js"></script>
+  
